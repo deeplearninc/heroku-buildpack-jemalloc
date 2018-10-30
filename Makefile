@@ -16,6 +16,6 @@ src/jemalloc.tar.bz2:
 .PHONY: jemalloc-heroku
 
 jemalloc-heroku: src/jemalloc.tar.bz2
-	docker build --rm -t mojodna/$@ .
+	docker build --rm -t deeplearninc/$@ .
 	-docker rm $@
-	docker run --name $@ mojodna/$@ /bin/echo $@
+	docker run --name $@ deeplearninc/$@ /bin/echo $@
